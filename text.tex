@@ -287,13 +287,38 @@ the short-time limit accuracy by one order in time. In Ref.~\cite{witt+09jcp} it
 exhibits clearly unphysical artefacts when it comes to modeling infra-red spectroscopy and vibrational dynamics. 
 Namely, vibrational spectra obtained by RPMD are contaminated by resonances between the physical vibrational modes
 of the system and the internal modes of the ring polymer, whyle CMD spectra are affected by a curvature problem that
-causes peaks corresponding to high frequency vibrations to broaden and shift to low frequency when the temperature
-decreases. 
-Note that both of these problems can be traced to the coupling between high-frequency modes and 
-near-zero frequency rotations or wagging modes of the covalent bonds. Resonances are observed when \emph{free ring polymer}
-frequencies overlap with the range of frequencies corresponding to physical oscillations of the system. 
-In the presence of a harmonic potential of frequency $\omega$, the ring polymer frequencies are shifted to
-$\sqrt{\omega^2 + \tilde{\omega}^2_k}$, and so in a truly one-dimensional system there can never be a resonance. 
+causes high frequency peaks to broaden and shift to lower frequencies with decreasing temperature. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/champagne.pdf}
+\caption{Schematic representation of the source of the resonance and curvature problems for a ring polymer 
+moving on top of a champagne-bottle potential (represented by the color scale, where white represents low energy and blue 
+and orange higher energies). a) Internal motion of the ring polymer in the angular direction can couple with motion 
+of the centroid in the radial direction. b) When internal motion of the ring polymer is decoupled from the centroid, 
+the ring polymer can relax the energy by contracting or relaxing in the angular direction, effectively softening the
+potential of mean force in the radial direction. }
+\label{fig:champagne}
+\end{figure}
+
+Both of these problems are two faces of the same coin, and can be traced to the interplay of 
+high-frequency stretching modes and near-zero frequency rotations or wagging modes of the bond. 
+ This can be understood by considering a ring polymer in a ``champagne bottle'' potential, as in 
+Figure~\ref{fig:champagne}a. Internal vibrations of the ring polymer along the angular direction 
+engender a net motion of the centroid in the radial direction, which is amplified
+when the two motions are in resonance. In the presence of a harmonic potential of frequency $\omega$, 
+the ring polymer frequencies are shifted to $\sqrt{\omega^2 + \tilde{\omega}^2_k}$, so in a truly 
+one-dimensional system there can never be a resonance. The fact that resonances involve an interplay 
+of different physical directions is apparent from the fact that they are observed when \emph{free ring polymer} 
+frequencies overlap with the range of frequencies corresponding to physical vibrational frequencies.
+
+The adiabatic decoupling that underlies CMD can shift the internal vibrations outside of the range of 
+physical frequencies, but does not eliminate the fact that internal angular vibrations are geometrically 
+coupled with the radial centroid motion. 
+As shown in Figure~\ref{fig:champagne}b, a radial displacement of the ring polymer that would correspond to a high 
+curvature of the potential can also be produced by an internal contraction in the soft angular
+direction. This results in an effective softening of the radial potential of mean force, which is the essence
+of the curvature problem as discussed in Ref.~\cite{witt+09jcp}.
 
 
 \subsection{Model molecules: OH and CH$_4$}
