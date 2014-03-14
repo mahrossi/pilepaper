@@ -279,7 +279,25 @@ arduous goal.
 %We note that for this 1D potential there will be no resonance problem in RPMD in the main peak, since the ring-polymer frequencies are always shifted to higher frequencies with respect to the first physical one ($\approx$ Eq. \ref{eq:harm-freq-rpmd}), and there is only one frequencies. We see this effect in the overtones but since they have very low intensity, they do not affect the spectrum. Also, there is no curvature problem, simply because it is a 1D potential. In Figure 
 %\ref{fig:spec-quartic} the corresponding Fourier transforms of the autocorrelation functions shown in Fig. \ref{fig:autocorr-quartic} are shown, which just confirm the considerations above. CMD and critically damped PILE produce the narrowest peaks, with the exact result being a $\delta$-function centered at the position of the dotted line. 
 
-\section{Model molecules: OH and CH$_4$}
+\section{Solving the resonance and curvature problems}
+
+In the previous section we have demonstrated that adding a stochastic thermostat to the internal degrees of freedom
+of a ring polymer without changing the mass matrix preserves all of the wholesome properties of RPMD, and only reduces
+the short-time limit accuracy by one order in time. In Ref.~\cite{witt+09jcp} it was shown that both RPMD and CMD 
+exhibits clearly unphysical artefacts when it comes to modeling infra-red spectroscopy and vibrational dynamics. 
+Namely, vibrational spectra obtained by RPMD are contaminated by resonances between the physical vibrational modes
+of the system and the internal modes of the ring polymer, whyle CMD spectra are affected by a curvature problem that
+causes peaks corresponding to high frequency vibrations to broaden and shift to low frequency when the temperature
+decreases. 
+Note that both of these problems can be traced to the coupling between high-frequency modes and 
+near-zero frequency rotations or wagging modes of the covalent bonds. Resonances are observed when \emph{free ring polymer}
+frequencies overlap with the range of frequencies corresponding to physical oscillations of the system. 
+In the presence of a harmonic potential of frequency $\omega$, the ring polymer frequencies are shifted to
+$\sqrt{\omega^2 + \tilde{\omega}^2_k}$, and so in a truly one-dimensional system there can never be a resonance. 
+
+
+\subsection{Model molecules: OH and CH$_4$}
+
 
 \begin{figure}[htbp]
 \centering
