@@ -1,0 +1,290 @@
+\begin{thebibliography}{34}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Feynman and Hibbs}(1964)}]{feyn-hibb65book}
+\bibinfo{author}{\bibfnamefont{R.~P.} \bibnamefont{Feynman}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.~R.} \bibnamefont{Hibbs}},
+  \emph{\bibinfo{title}{{Quantum Mechanics and Path Integrals}}}
+  (\bibinfo{publisher}{McGraw-Hill}, \bibinfo{address}{New York},
+  \bibinfo{year}{1964}).
+
+\bibitem[{\citenamefont{Chandler and Wolynes}(1981)}]{chan-woly81jcp}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Chandler}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.~G.} \bibnamefont{Wolynes}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{74}},
+  \bibinfo{pages}{4078} (\bibinfo{year}{1981}).
+
+\bibitem[{\citenamefont{Parrinello and Rahman}(1984)}]{parr-rahm84jcp}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Parrinello}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Rahman}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{80}},
+  \bibinfo{pages}{860} (\bibinfo{year}{1984}).
+
+\bibitem[{\citenamefont{Ceperley}(1995)}]{cepe95rmp}
+\bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Ceperley}},
+  \bibinfo{journal}{Rev. Mod. Phys.} \textbf{\bibinfo{volume}{67}},
+  \bibinfo{pages}{279} (\bibinfo{year}{1995}).
+
+\bibitem[{\citenamefont{Ceriotti and Manolopoulos}(2012)}]{ceri-mano12prl}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Ceriotti}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Manolopoulos}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{109}},
+  \bibinfo{pages}{100604} (\bibinfo{year}{2012}).
+
+\bibitem[{\citenamefont{Cao and Voth}(1993)}]{cao-voth93jcp}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Cao}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~A.} \bibnamefont{Voth}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{99}},
+  \bibinfo{pages}{10070} (\bibinfo{year}{1993}).
+
+\bibitem[{\citenamefont{Cao and Voth}(1994)}]{cao-voth94jcp}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Cao}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~A.} \bibnamefont{Voth}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{101}},
+  \bibinfo{pages}{6168} (\bibinfo{year}{1994}).
+
+\bibitem[{\citenamefont{Richardson and Althorpe}(2009)}]{rich-alth09jcp}
+\bibinfo{author}{\bibfnamefont{J.~O.} \bibnamefont{Richardson}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{S.~C.}
+  \bibnamefont{Althorpe}}, \bibinfo{journal}{J. Chem. Phys.}
+  \textbf{\bibinfo{volume}{131}}, \bibinfo{pages}{214106}
+  (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Hele and Althorpe}(2013)}]{hele-alth13jcp}
+\bibinfo{author}{\bibfnamefont{T.~J.~H.} \bibnamefont{Hele}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.~C.} \bibnamefont{Althorpe}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{138}},
+  \bibinfo{pages}{084108} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{Jang and Voth}(1999{\natexlab{a}})}]{jangvoth99jpc}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Jang}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~A.} \bibnamefont{Voth}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{111}}, \bibinfo{pages}{2371}
+  (\bibinfo{year}{1999}{\natexlab{a}}).
+
+\bibitem[{\citenamefont{Jang and Voth}(1999{\natexlab{b}})}]{jangvoth99jpc2}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Jang}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~A.} \bibnamefont{Voth}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{111}}, \bibinfo{pages}{2357}
+  (\bibinfo{year}{1999}{\natexlab{b}}).
+
+\bibitem[{\citenamefont{Habershon et~al.}(2013)\citenamefont{Habershon,
+  Manolopoulos, Markland, and Miller}}]{habe+13arpc}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Habershon}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Manolopoulos}},
+  \bibinfo{author}{\bibfnamefont{T.~E.} \bibnamefont{Markland}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{T.~F.}
+  \bibnamefont{Miller}}, \bibinfo{journal}{Annual review of physical chemistry}
+  \textbf{\bibinfo{volume}{64}}, \bibinfo{pages}{387} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{Witt et~al.}(2009)\citenamefont{Witt, Ivanov, Shiga,
+  Forbert, and Marx}}]{witt+09jcp}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Witt}},
+  \bibinfo{author}{\bibfnamefont{S.~D.} \bibnamefont{Ivanov}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Shiga}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Forbert}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Marx}}, \bibinfo{journal}{J.
+  Chem. Phys.} \textbf{\bibinfo{volume}{130}}, \bibinfo{pages}{194510}
+  (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Ivanov et~al.}(2010)\citenamefont{Ivanov, Witt, Shiga,
+  and Marx}}]{ivanov+10jpc}
+\bibinfo{author}{\bibfnamefont{S.~D.} \bibnamefont{Ivanov}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Witt}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Shiga}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Marx}}, \bibinfo{journal}{The
+  Journal of Chemical Physics} \textbf{\bibinfo{volume}{132}},
+  \bibinfo{pages}{031101} (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Habershon et~al.}(2008)\citenamefont{Habershon,
+  Fanourgakis, and Manolopoulos}}]{habe+08jcp}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Habershon}},
+  \bibinfo{author}{\bibfnamefont{G.~S.} \bibnamefont{Fanourgakis}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~E.}
+  \bibnamefont{Manolopoulos}}, \bibinfo{journal}{J. Chem. Phys.}
+  \textbf{\bibinfo{volume}{129}}, \bibinfo{pages}{74501}
+  (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Ceriotti et~al.}(2010)\citenamefont{Ceriotti,
+  Parrinello, Markland, and Manolopoulos}}]{ceri+10jcp}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Ceriotti}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Parrinello}},
+  \bibinfo{author}{\bibfnamefont{T.~E.} \bibnamefont{Markland}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{D.~E.}
+  \bibnamefont{Manolopoulos}}, \bibinfo{journal}{J. Chem. Phys.}
+  \textbf{\bibinfo{volume}{133}}, \bibinfo{pages}{124104}
+  (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Ceriotti et~al.}(2011)\citenamefont{Ceriotti,
+  Manolopoulos, and Parrinello}}]{ceri+11jcp}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Ceriotti}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Manolopoulos}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Parrinello}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{134}},
+  \bibinfo{pages}{84104} (\bibinfo{year}{2011}).
+
+\bibitem[{\citenamefont{Paesani and Voth}(2010)}]{paesani-voth10jcp}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Paesani}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.~A.} \bibnamefont{Voth}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{132}}, \bibinfo{pages}{014105}
+  (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Craig and Manolopoulos}(2004)}]{crai-mano04jcp}
+\bibinfo{author}{\bibfnamefont{I.~R.} \bibnamefont{Craig}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Manolopoulos}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{121}},
+  \bibinfo{pages}{3368} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Yeh et~al.}(1989)\citenamefont{Yeh, Okumura, Myers,
+  Price, and Lee}}]{YehLee1989}
+\bibinfo{author}{\bibfnamefont{L.~I.} \bibnamefont{Yeh}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Okumura}},
+  \bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Myers}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Price}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.~T.} \bibnamefont{Lee}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{91}}, \bibinfo{pages}{7319} (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Asmis et~al.}(2003)\citenamefont{Asmis, Pivonka,
+  Santambrogio, Brümmer, Kaposta, Neumark, and Wöste}}]{AsmisScience2003}
+\bibinfo{author}{\bibfnamefont{K.~R.} \bibnamefont{Asmis}},
+  \bibinfo{author}{\bibfnamefont{N.~L.} \bibnamefont{Pivonka}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Santambrogio}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Brümmer}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Kaposta}},
+  \bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Neumark}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Wöste}},
+  \bibinfo{journal}{Science} \textbf{\bibinfo{volume}{299}},
+  \bibinfo{pages}{1375} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Vendrell et~al.}(2007)\citenamefont{Vendrell, Gatti,
+  and Meyer}}]{VendrellMeyer2007}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Vendrell}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Gatti}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{H.-D.} \bibnamefont{Meyer}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{127}}, \bibinfo{pages}{184303}
+  (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Huang et~al.}(2005)\citenamefont{Huang, Braams, and
+  Bowman}}]{HuangBraamsBowman2005}
+\bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Huang}},
+  \bibinfo{author}{\bibfnamefont{B.~J.} \bibnamefont{Braams}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~M.}
+  \bibnamefont{Bowman}}, \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{122}}, \bibinfo{pages}{044308}
+  (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Niedner-Schatteburg}(2008)}]{Schatteburg2008}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Niedner-Schatteburg}},
+  \bibinfo{journal}{Angewandte Chemie International Edition}
+  \textbf{\bibinfo{volume}{47}}, \bibinfo{pages}{1008} (\bibinfo{year}{2008}).
+
+\bibitem[{\citenamefont{Agostini et~al.}(2011)\citenamefont{Agostini,
+  Vuilleumier, and Ciccotti}}]{AgostiniCiccotti2011}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Agostini}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Vuilleumier}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Ciccotti}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{134}}, \bibinfo{pages}{084302}
+  (\bibinfo{year}{2011}).
+
+\bibitem[{\citenamefont{Park et~al.}(2007)\citenamefont{Park, Shin, Singh, and
+  Kim}}]{ParkKim2007}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Park}},
+  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Shin}},
+  \bibinfo{author}{\bibfnamefont{N.~J.} \bibnamefont{Singh}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.~S.} \bibnamefont{Kim}},
+  \bibinfo{journal}{The Journal of Physical Chemistry A}
+  \textbf{\bibinfo{volume}{111}}, \bibinfo{pages}{10692}
+  (\bibinfo{year}{2007}).
+
+\bibitem[{\citenamefont{Vener et~al.}(2001)\citenamefont{Vener, Kuhn, and
+  Sauer}}]{VenerSauer2001}
+\bibinfo{author}{\bibfnamefont{M.~V.} \bibnamefont{Vener}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Kuhn}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Sauer}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{114}}, \bibinfo{pages}{240} (\bibinfo{year}{2001}).
+
+\bibitem[{\citenamefont{Sauer and D\"obler}(2005)}]{SauerDoebler2005}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Sauer}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{D\"obler}},
+  \bibinfo{journal}{ChemPhysChem} \textbf{\bibinfo{volume}{6}},
+  \bibinfo{pages}{1706} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Cheng and Krause}(1997)}]{ChengKrause1997}
+\bibinfo{author}{\bibfnamefont{H.-P.} \bibnamefont{Cheng}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Krause}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{107}}, \bibinfo{pages}{8461} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Baer et~al.}(2010)\citenamefont{Baer, Marx, and
+  Mathias}}]{BaerMarxMathias2010}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Baer}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Marx}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Mathias}},
+  \bibinfo{journal}{Angewandte Chemie International Edition}
+  \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{7346} (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Kaledin et~al.}(2009)\citenamefont{Kaledin, Kaledin,
+  Bowman, Ding, and Jordan}}]{KaledinBowmanJordan2009}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Kaledin}},
+  \bibinfo{author}{\bibfnamefont{A.~L.} \bibnamefont{Kaledin}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Bowman}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Ding}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.~D.} \bibnamefont{Jordan}},
+  \bibinfo{journal}{The Journal of Physical Chemistry A}
+  \textbf{\bibinfo{volume}{113}}, \bibinfo{pages}{7671} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Guasco et~al.}(2011)\citenamefont{Guasco, Johnson, and
+  McCoy}}]{GuascoJohnson2011}
+\bibinfo{author}{\bibfnamefont{T.~L.} \bibnamefont{Guasco}},
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Johnson}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~B.} \bibnamefont{McCoy}},
+  \bibinfo{journal}{The Journal of Physical Chemistry A}
+  \textbf{\bibinfo{volume}{115}}, \bibinfo{pages}{5847} (\bibinfo{year}{2011}).
+
+\bibitem[{\citenamefont{Hammer et~al.}(2005)\citenamefont{Hammer, Diken,
+  Roscioli, Johnson, Myshakin, Jordan, McCoy, Huang, Bowman, and
+  Carter}}]{HammerBowmanCarter2005}
+\bibinfo{author}{\bibfnamefont{N.~I.} \bibnamefont{Hammer}},
+  \bibinfo{author}{\bibfnamefont{E.~G.} \bibnamefont{Diken}},
+  \bibinfo{author}{\bibfnamefont{J.~R.} \bibnamefont{Roscioli}},
+  \bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Johnson}},
+  \bibinfo{author}{\bibfnamefont{E.~M.} \bibnamefont{Myshakin}},
+  \bibinfo{author}{\bibfnamefont{K.~D.} \bibnamefont{Jordan}},
+  \bibinfo{author}{\bibfnamefont{A.~B.} \bibnamefont{McCoy}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Huang}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Bowman}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Carter}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{122}}, \bibinfo{pages}{244301}
+  (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Fridgen et~al.}(2004)\citenamefont{Fridgen, McMahon,
+  MacAleese, Lemaire, and Maitre}}]{FridgenMaitre2004}
+\bibinfo{author}{\bibfnamefont{T.~D.} \bibnamefont{Fridgen}},
+  \bibinfo{author}{\bibfnamefont{T.~B.} \bibnamefont{McMahon}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{MacAleese}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Lemaire}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Maitre}},
+  \bibinfo{journal}{The Journal of Physical Chemistry A}
+  \textbf{\bibinfo{volume}{108}}, \bibinfo{pages}{9008} (\bibinfo{year}{2004}).
+
+\end{thebibliography}
