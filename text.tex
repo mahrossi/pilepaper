@@ -337,58 +337,28 @@ position and amplitude as a function of T for PILE and CMD -- not RPMD where the
 cannot ever be reproduced by semiclassical methods.
 \end{itemize}
 
+
+
+We start by studying two model molecules that have been studied in Ref. \cite{witt+09jcp},
+namely the OH and the CH$_4$ molecules with an interatomic potential given by
+
+\begin{equation}
+\phi=\sum_{bonds} \frac{k_b}{2} (r-r_{eq})^2 + \sum_{angles} \frac{k_a}{2}(\theta - \theta_{eq})^2,
+\end{equation}
+
+\noindent where we use all the same values for $k_b$, $k_a$, $r_{eq}$, and $\theta_{eq}$ that were used in Ref. \cite{witt+09jcp}.
+%These model molecules are especially interesting because they are known cases where
+%both the curvature and the resonance problems have been well studied by Witt and coworkers\cite{witt+09jcp}.
+%As in Ref. \cite{witt+09jcp}, we chose $k_b=0.49536$ Ha/bohr$^2$ and $r_{eq}=1.0$\AA~ for the OH molecule,
+%and  $k_b=0.30345$ Ha/bohr$^2$, $k_a=3.1068\times10^{-5}$ Ha/deg$^2$, $r_{eq}=1.09$\AA, and $\theta_{eq}=107.8$deg for
+%the CH$_4$ molecule. 
+
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/comparison_oh_factors.pdf}
 \caption{Dipole absorption cross section for the OH model molecule: (a) and (b) CMD and PILE methods at 100, 200, and 300K ; (c)  and (d) RPMD and PILE methods at 109, 450, and 436 K. The dotted grey line corresponds to the classical vibrational frequency predicted for this model.}
 \label{fig:oh-rpmd-cmd-pile}
 \end{figure}
-
-
-In this section we study two model molecules, already treated in Ref. \cite{witt+09jcp}.
-They are the OH and the CH$_4$ molecules, for which the interatomic potential is
-given by
-
-\begin{equation}
-\phi=\sum_{bonds} \frac{k_b}{2} (r-r_{eq})^2 + \sum_{angles} \frac{k_a}{2}(\theta - \theta_{eq})^2,
-\end{equation}
-
-These model molecules are especially interesting because they are known cases where
-both the curvature and the resonance problems have been well studied by Witt and coworkers\cite{witt+09jcp}.
-As in Ref. \cite{witt+09jcp}, we chose $k_b=0.49536$ Ha/bohr$^2$ and $r_{eq}=1.0$\AA~ for the OH molecule,
-and  $k_b=0.30345$ Ha/bohr$^2$, $k_a=3.1068\times10^{-5}$ Ha/deg$^2$, $r_{eq}=1.09$\AA, and $\theta_{eq}=107.8$deg for
-the CH$_4$ molecule. For these models, we calculate the dipole absorption cross section given by 
-
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.4\textwidth]{figures/oh_rpmdvspiledampings_109K.pdf}
-\caption{Dipole absorption cross section for the OH model molecule at 109K. The various plots show the RPMD spectrum compared to the PILE methods with different $\gamma^{(k)}$ parameters.}
-\label{fig:oh-rpmd-pile-dampings}
-\end{figure}
-
-\begin{equation}
-n(\omega)\alpha(\omega)= \frac{\pi \beta \omega^2}{3cV\epsilon_0} \tilde{I}(\omega),
-\end{equation}
-
-\noindent where $\tilde{I}(\omega)$ is the Fourier transform of the Kubo-transformed dipole autocorrelation function.
-It is this autocorrelation function that we approximate with CMD, RPMD, and the PILE method. We here also filter out
-translations and rotations of the molecule using the scheme proposed in Ref. \cite{witt+09jcp}.
-
-
-For the OH molecule we calculate the RPMD spectra at the same temperatures and number of beads discussed in Ref. \cite{witt+09jcp}, 
-namely 109 K and 64 beads (resonant case), 350K and 16 beads (non-resonant case), and 436K and 16 beads (resonant case). We used a time
-step of 0.25 fs for these simulations.
-In Figure \ref{fig:oh-rpmd-cmd-pile}(c) and (d), we compare these spectra with the corresponding PILE spectra (critical damping).
-The classical frequency of vibration for this molecule and the parameters chosen here
-would lie at 3715.6 cm$^{-1}$ \mr{check!}.
-As in Ref.\cite{witt+09jcp}. the vibrational frequencies of the ring polymer in the RPMD method 
-split the peak at the resonant temperatures. The PILE spectra yield a 
-single peak, which is at the same place at all temperatures and slightly
-red-shifted with respect to the classical vibrational frequency. Also, the non-resonant frequencies
-of the ring polymer cannot be observed in the PILE spectra. We also notice that the PILE
-spectrum gets broader as the temperature is lowered. This effect arises from the fact that at lower
-temperatures there are more internal frequencies of the ring polymer which interact with the physical frequency ... \mr{[comment: must discuss!]}.
 
 \begin{figure}[htbp]
 \centering
@@ -397,37 +367,61 @@ temperatures there are more internal frequencies of the ring polymer which inter
 \label{fig:ch4-rpmd-cmd-pile}
 \end{figure}
 
-In Fig. \ref{fig:oh-rpmd-cmd-pile}(a) and (b) we compare the CMD and PILE spectra for the OH molecule
-at 100K, 200K, and 300K. The CMD simulations were run with a time step of 0.01 fs, while the PILE simulations
-were run with a time step of 0.25 fs. We used 64 beads at 100K, and 16 beads at 200 and 300K.
-The curvature problem is clear for the CMD spectra: at 100K the peak is red-shifted to as low as 2200 cm$^{-1}$
-and massively broadened. Even at 300K some of the curvature problem is still observed. The PILE method
-does not show this effect. Although the PILE peak broadens slightly as the temperature
-lowers, the peak stays at the same position for all temperatures. The severe curvature problem seen in CMD is thus
-closely related to the choice of the dynamic mass matrix.
+For these models, we calculate the dipole absorption cross section $n(\omega)\alpha(\omega)$, which is proportional to 
+
+\begin{equation}
+n(\omega)\alpha(\omega) \propto \omega^2  \tilde{I}(\omega),
+\end{equation}
+
+\noindent where $\tilde{I}(\omega)$ is the Fourier transform of the Kubo-transformed dipole autocorrelation function.
+It is this autocorrelation function that we approximate with CMD, RPMD, and the PILE method. We here also filter out
+translations and rotations of the molecule using the scheme proposed in Ref. \cite{witt+09jcp}.
 
 
-In Figure \ref{fig:oh-rpmd-pile-dampings} we compare different values of the $\gamma^{(k)}$ parameters in the PILE method,
-both in the underdamped and overdamped regimes for the IR spectrum of the OH molecule at 109K. The position
-and width of the peaks are affected by changing this parameter, but not substantially - similar to what
-we observe for the quartic potential. Going as high as ten times the critical damping, or as low
+For  both molecules we calculate the spectra at the same temperatures and with the same number of beads used in Ref. \cite{witt+09jcp}.  
+%namely 109 K and 64 beads (resonant case), 350K and 16 beads (non-resonant case), and 436K and 16 beads (resonant case). We used a time
+%step of 0.25 fs for these simulations.
+In Figures \ref{fig:oh-rpmd-cmd-pile} and \ref{fig:ch4-rpmd-cmd-pile} we show 
+in panels (a) and (c) the CMD and RPMD 
+spectra for the OH and CH$_4$ molecules, respectively.
+For the OH molecule, we show a dotted line where the
+exact frequency of vibration should be (3715.6 cm$^{-1}$). 
+The results show that the curvature problem of CMD is more 
+accentuated for the OH molecule than for the CH$_4$ molecule: in
+both cases the peaks at $\approx$ 3000cm$^{-1}$ shift (quite dramatically)
+to lower frequencies and broaden substantially. 
+For RPMD, the resonances with the internal modes of the ring polymer
+split the vibrational peaks at the resonant temperatures (109K and 436K for
+OH and 136K and 273K for CH$_4$). In panels (b) and (d) of Figures  \ref{fig:oh-rpmd-cmd-pile} and \ref{fig:ch4-rpmd-cmd-pile} we show the PILE results for the corresponding temperatures of the OH and CH$_4$ molecules
+respectively. In all cases the resonant frequencies disappear and the curvature problem is not present. 
+This shows that the curvature problem is indeed a feature of the choice
+of the mass matrix used in CMD (in order to adiabatically separate the 
+internal modes of the ring polymer from the centroid), 
+and not related to the thermostatting of the internal modes.
+We note, nevertheless, that the PILE
+spectrum gets slightly broader as the temperature is lowered. 
+This effect arises from the fact that at lower
+temperatures there are more internal frequencies of the
+ ring polymer which interact with the physical frequency.
+ As will be further discussed in the next section, all
+ of these methods introduce an artificial broadening in the vibrational spectrum.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/oh_rpmdvspiledampings_109K.pdf}
+\caption{Dipole absorption cross section for the OH model molecule at 109K. The various plots show the RPMD spectrum compared to the PILE methods with different $\gamma^{(k)}$ parameters.}
+\label{fig:oh-rpmd-pile-dampings}
+\end{figure}
+
+For the purpose of investigating the effect that the $\gamma^{(k)}$ parameters
+have on the position and broadening of the vibrational peaks, we show in
+Figure \ref{fig:oh-rpmd-pile-dampings} the
+PILE IR spectrum of the OH molecule at 109K calculated with different
+$\gamma^{(k)}$ parameters both in the underdamped and overdamped regimes. 
+The changes observed are not substantial: Going as high as ten times the critical damping, or as low
 as one tenth of it, does not change the peak position by more than 3\% of its wavenumber. Since we do not
-find a mathematical criterion to fix these parameters, this uncertainty will be intrinsic to this method.
+find a mathematical criterion to fix these parameters, this uncertainty is  intrinsic to this method.
 
-For the CH$_4$ molecule we calculate the same data as we did for the OH molecule. We use all
-the same simulation settings as for the OH molecule. The results are reported
-in Figure \ref{fig:ch4-rpmd-cmd-pile}. In Fig. \ref{fig:ch4-rpmd-cmd-pile}(c) and (d), it is clear that the resonance
-problem of RPMD is healed by the PILE method for the double resonant case (136K) and single resonant case (273K). 
-In Fig. \ref{fig:ch4-rpmd-cmd-pile}(a) and (b), it is also shown that the PILE method predicts
-the bending peak ($\approx$1200 cm$^{-1}$) at the same position as CMD, while the stretching peak
-at high frequencies does not show the curvature problem in the PILE method. 
-For the higher temperatures (300K and 400K),
-where both the curvature problem of CMD and the resonance problem of RPMD are not severe, both spectra
-agree very well with the PILE one. Overall, we again observe a broadening 
-of the stretching peak in the PILE method as the temperature is lowered. All observations are consistent with the OH case.
-
-Next, we investigate a non-empirical potential energy surface in order to see
-how these methods compare.
 
 
 \section{Real OH}
