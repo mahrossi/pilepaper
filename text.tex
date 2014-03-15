@@ -479,34 +479,35 @@ are much broader. In (d), substantial shifts due to NQE in the evaluation of the
 \end{figure}
 
 As a final example of the application of a stochastic term to remove unphysical resonances 
-from RPMD spectra, let us consider a more realistic example, that also exhibits quantum
-features that one cannot hope to capture with a semi-classical approach. 
-The Zundel cation H$_5$O$_2^+$ is an ideal benchmark system, having been 
-extensively studied in the literature~\cite{Schatteburg2008}, both theoretically 
+from RPMD spectra, let us consider a more complex case. The Zundel cation H$_5$O$_2^+$ 
+is an ideal benchmark system, having been 
+extensively studied in the literature~\cite{Schatteburg2008}, from both a theoretical
 \cite{AgostiniCiccotti2011, ParkKim2007, VenerSauer2001, SauerDoebler2005, ChengKrause1997, VendrellMeyer2007, 
 BaerMarxMathias2010, KaledinBowmanJordan2009, HuangBraamsBowman2005} 
-and experimentally~\cite{YehLee1989, GuascoJohnson2011, AsmisScience2003, HammerBowmanCarter2005, FridgenMaitre2004}. 
-Particular attention has been given to a doublet structure in the 
-shared proton stretch region that can be measured
-at low temperatures~\cite{GuascoJohnson2011, HammerBowmanCarter2005}.
-Theoretically,  this structure can only be captured by certain levels of 
-theory that include anharmonic effects and a fully quantum mechanical treatment
-of nuclear dynamics, such as the multi-configutarional time-dependent Hartree (MCTDH) method at
-0K \cite{VendrellMeyer2007}. It is completely absent from any harmonic treatment,
-and also expected to be absent from the methods used here due to the lack
-of quantum phase information in any of them.
-The Zundel cation is also convenient as a benchmark of new methodologies
+and experimental~\cite{YehLee1989, GuascoJohnson2011, AsmisScience2003, HammerBowmanCarter2005, FridgenMaitre2004}
+points of view. The Zundel cation is also convenient as a benchmark of new methodologies
 because of the availability of a potential energy and dipole surfaces parametrized
 with CCSD(T) data that was published by Huang, Braams and Bowman~\cite{HuangBraamsBowman2005},
 which is both very accurate and inexpensive to evaluate. 
 
+Furthermore, H$_5$O$_2^+$ exhibits profoundly quantum mechanical behaviour
+that one cannot expect to reproduce with the techniques that we present here
+since they all lack any form of quantum phase information. 
+The shared proton region contains a doublet feature 
+at low temperatures that has attracted a lot of attention~\cite{GuascoJohnson2011, HammerBowmanCarter2005}.
+As a matter of fact, this structure can only be captured by certain levels of 
+theory that include anharmonic effects and a fully quantum mechanical treatment
+of nuclear dynamics, such as the multi-configurational time-dependent Hartree (MCTDH) method at
+0K \cite{VendrellMeyer2007} and is therefore an excellent memento of the limitations of 
+approximate, semi-classical methods.
 
-Let us first consider the frequency range corresponding to the OH stretch (Figure~???). Experiments
-show two distinct peaks at about 3600 and 3700 cm$^{-1}$~\cite{YehLee1989}. As for the 
-anharmonic OH discussed in the previous paragraph, the classical spectrum is blue shifted by almost 
+With this caveat in mind, let us first consider the frequency range corresponding 
+to the OH stretch (Figure~???). Experiments show two distinct peaks at about 
+3600 and 3700 cm$^{-1}$~\cite{YehLee1989}. As for the anharmonic OH discussed 
+in the previous paragraph, the classical spectrum is blue shifted by almost 
 150~cm$^{-1}$. The RPMD spectrum is closer to experiment, but shows multiple peaks and a broad
 low-frequency feature. In a multi-dimensional problem such as this, resonances may be due to 
-internal modes corresponding to non-zero frequency molecular vibrations which makes it hard
+internal modes corresponding to non-zero frequency molecular vibrations, which makes it hard
 to predict whether or not the spectrum is contaminated by spurious oscillations. 
 CMD is red shifted with respect to experiment, and does not show recognizable separate peaks.
 Given the high accuracy of the potential energy surface, we can attribute the red shift to the
@@ -514,19 +515,18 @@ curvature problem -- and in fact the shift is exacerbated if the temperature is 
 As pointed out in previous work~\ref{Ivanonv????}, in a more complex case in which one could not
 profit of a potential energy surface of such exquisite quality, or in the absence of very clean 
 experiments, it would be impossible to determine whether the shift relative to the classical
-simulation is due to genuine quantum anharmonic effects or to the artefacts of the simulation.
-Finally, the position of the stretching peak in the PILE spectrum is in better agreement
+simulation is due to genuine quantum anharmonic effects or to the artefacts inherent in the methodology.
+Finally, let us consider the PILE spectrum. The position of the stretching peak  is in better agreement
 with experiment, even though the excessive broadening that was also observed for the harmonic and anharmonic
 OH washes out the doublet structure and yields a single, very broad peak.
 
-Experimental data in the intermediate frequency region of the spectrum are available
-from experiments at 100K~\cite{AsmisScience2003} and from highly accurate MCTDF calculations
-at 0K~\cite{VendrellMeyer2007}. We performed simulations at 100K with the various methods
-(Figure~????). The peaks are very broad in all cases, and RPMD 
+We then performed simulations at 100K to compare RPMD, CMD and PILE with experiments
+measuring the intermediate frequency region of the spectrum~\cite{AsmisScience2003} (Figure~????). 
+All semi-classical approaches generate very broad peaks, and RPMD 
 displays multiple peaks in the bending region that can probably be attributed to resonances.
-Interestingly, the bending peak for CMD is slightly lower than both experiment and MCTDH,
-suggesting that at such low temperatures artefacts due to adiabatic decoupling can also manifest 
-themselves for lower frequency modes than the stretches. 
+Interestingly, the bending peak for CMD is red-shifted relative to experiment, suggesting 
+that at such low temperatures artefacts due to adiabatic decoupling can also manifest themselves 
+for lower frequency modes than the stretches. 
 None of the approximate methods investigated here can reproduce the
 doublet peak at around 1000 cm$^{-1}$, which is shown in Fig. \ref{fig:zundel-spectra}(a).
 Given that this doublet structure has been interpreted as a Fermi resonance
@@ -535,14 +535,15 @@ the O-O stretching mode, and the H-O-H wagging mode \cite{VendrellMeyer2007, Sch
 it does not come as a surprise that it is not present in the methods investigated here:
 none of these methods contain the necessary physics to describe such a resonance.
 
-????
-However, only extremely computationally expensive methods [CITE?] are able to describe
-such effects, which also become less important as the system size grows. In the realm
-of approximate methods for including nuclear quantum effects for dynamical observables,
-and that can be applied for systems of high dimensionality without an extreme
-computational cost, the newly proposed PILE method
-thus emerges as the most promising candidate. 
-
+% this belongs to conclusions, so we leave it to David
+%One has to keep in mind that semi-classical quantum dynamics methods cannot fully account 
+%for quantum coherence, and can only provide a qualitative indication of whether quantum 
+%effects introduce significant changes to vibrational spectra. Given the 
+%prohibitive cost of more sophisticated and accurate methods, however, 
+%semi-classical approaches are currently the only viable approach to treat 
+%nuclear quantum dynamics in complex systems such as those encountered in the condensed phase.
+%The approach we have presented here cures the most evident artefacts of both CMD and RPMD
+%by combining features of both.
 
 
 \section{Conclusions}
