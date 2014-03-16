@@ -329,10 +329,10 @@ of the curvature problem as discussed in Ref.~\cite{witt+09jcp}.
 \item Discuss the two molecules at the same time -- they are the same, just say
 that CH4 shows less of the curvature problem as discussed in the OTHER Marx paper. \mr{OK} 
 Say that RPMD resonances are not healed by an angular potential because they are related
-to vibrations as opposed to relaxation of the ring polymer as in CMD curvature problem
+to vibrations as opposed to relaxation of the ring polymer as in CMD curvature problem \mr{OK}
 \item Real OH -- as in Marx discuss the problem where you can't tell the anharmonic shift from
 the curvature problem in CMD, show that PILE is nearly on top of the anharmonic shift. Do a figure with the peak
-position and amplitude as a function of T for PILE and CMD -- not RPMD where there are multiple peaks.
+position and amplitude as a function of T for PILE and CMD -- not RPMD where there are multiple peaks. \mr{OK}
 \item Zundel -- real potential, complex features, note that the doublet which is genuinely quantum 
 cannot ever be reproduced by semiclassical methods.
 \end{itemize}
@@ -344,6 +344,7 @@ namely the OH and the CH$_4$ molecules with an interatomic potential given by
 
 \begin{equation}
 \phi=\sum_{bonds} \frac{k_b}{2} (r-r_{eq})^2 + \sum_{angles} \frac{k_a}{2}(\theta - \theta_{eq})^2,
+\label{eq:model}
 \end{equation}
 
 \noindent where we use all the same values for $k_b$, $k_a$, $r_{eq}$, and $\theta_{eq}$ that were used in Ref. \cite{witt+09jcp}.
@@ -356,14 +357,14 @@ namely the OH and the CH$_4$ molecules with an interatomic potential given by
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/comparison_oh_factors.pdf}
-\caption{Dipole absorption cross section for the OH model molecule: (a) and (b) CMD and PILE methods at 100, 200, and 300K ; (c)  and (d) RPMD and PILE methods at 109, 450, and 436 K. The dotted grey line corresponds to the classical vibrational frequency predicted for this model.}
+\caption{Dipole absorption cross section for the OH model molecule with an interatomic potential given by Eq. \ref{eq:model}: (a) and (b) CMD and PILE methods at 100, 200, and 300K ; (c)  and (d) RPMD and PILE methods at 109, 450, and 436 K. The dotted grey line corresponds to the classical vibrational frequency predicted for this model 3715.6 cm$^{-1}$.}
 \label{fig:oh-rpmd-cmd-pile}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/comparison_ch4_factors.pdf}
-\caption{Dipole absorption cross section for the CH$_4$ model molecule: (a) and (b) CMD and PILE methods at 100, 200, and 300K; (c) and (d) RPMD and PILE methods at 136, 273, and 450 K.}
+\caption{Dipole absorption cross section for the CH$_4$ model molecule with an interatomic potential given by Eq. \ref{eq:model}: (a) and (b) CMD and PILE methods at 100, 200, and 300K; (c) and (d) RPMD and PILE methods at 136, 273, and 450 K.}
 \label{fig:ch4-rpmd-cmd-pile}
 \end{figure}
 
@@ -387,17 +388,23 @@ spectra for the OH and CH$_4$ molecules, respectively.
 For the OH molecule, we show a dotted line where the
 exact frequency of vibration should be (3715.6 cm$^{-1}$). 
 The results show that the curvature problem of CMD is
-present in both OH molecule than for the CH$_4$ molecules,
-in that the peaks at $\approx$ 3000cm$^{-1}$ shift (quite dramatically)
+present in both molecules,
+such that the peaks at $\approx$ 3000cm$^{-1}$ shift (quite dramatically)
 to lower frequencies and broaden substantially.
-The shift is more dramatic for the OH molecule than for the
-CH$_4$ molecule -- as discussed in Refs. \cite{witt+09jcp, ivanov+10jpc}.
+The shift is more accentuated for the OH molecule than for the
+CH$_4$ molecule, as discussed in Refs. \cite{witt+09jcp, ivanov+10jpc}.
 The reason is that the form of the potential for the CH$_4$ molecule
 does not allow the ring polymer to curve and deform the effective
 potential felt by the centroid as much as in the OH case.
 For RPMD, the resonances with the internal modes of the ring polymer
 split the vibrational peaks at the resonant temperatures (109K and 436K for
-OH and 136K and 273K for CH$_4$). In panels (b) and (d) of Figures  \ref{fig:oh-rpmd-cmd-pile} and \ref{fig:ch4-rpmd-cmd-pile} we show the PILE results for the corresponding temperatures of the OH and CH$_4$ molecules
+OH and 136K and 273K for CH$_4$). In this case, the resonance
+problem is just as accentuated for both molecules, since its origin is 
+related to internal vibrations of the free ring polymer that are 
+independent of the form of the physical potential. 
+
+
+In panels (b) and (d) of Figures  \ref{fig:oh-rpmd-cmd-pile} and \ref{fig:ch4-rpmd-cmd-pile} we show the PILE results for the corresponding temperatures of the OH and CH$_4$ molecules
 respectively. In all cases the resonant frequencies disappear and the curvature problem is not present. 
 This shows that the curvature problem is indeed a feature of the choice
 of the mass matrix used in CMD (in order to adiabatically separate the 
@@ -423,29 +430,56 @@ have on the position and broadening of the vibrational peaks, we show in
 Figure \ref{fig:oh-rpmd-pile-dampings} the
 PILE IR spectrum of the OH molecule at 109K calculated with different
 $\gamma^{(k)}$ parameters both in the underdamped and overdamped regimes. 
-The changes observed are not substantial: Going as high as ten times the critical damping, or as low
-as one tenth of it, does not change the peak position by more than 3\% of its wavenumber. Since we do not
+The changes observed are not substantial: Going as high as ten times the critical damping (Fig. \ref{fig:oh-rpmd-pile-dampings}(e)) , or as low
+as one tenth of it (Fig. \ref{fig:oh-rpmd-pile-dampings}(b)), does not change the peak position by more than 3\% of its wavenumber. Since we do not
 find a mathematical criterion to fix these parameters, this uncertainty is  intrinsic to this method.
 
 
 
-\section{Real OH}
+\subsection{Realistic OH molecule}
 
-We consider the real OH molecule with the interatomic potential given by a Morse-type potential of the form
+
+We consider now the OH molecule 
+with an anharmonic interatomic potential given by
 
 \begin{equation}
 \phi = D_{e} \left[ 1-e^{-\alpha(r-r_{e})}\right]^2 
+\label{eq:morse}
 \end{equation}
 
-\noindent where $D_{e} = \omega_e^2/4\omega_e\chi_e$, $\alpha=\sqrt{2\mu_{OH}\omega_e\chi_e}$. The parameters $\omega_e$=3737.76 cm$^{-1}$, $\omega_e \chi_e$=84.881 cm$^{-1}$, and $r_{e}$ = 0.96966 \AA\, were obtained from the parameters measured for the real OH molecule, as reported in Ref. [HERZBERG].
+\noindent where $D_{e} = \omega_e^2/4\omega_e\chi_e$, $\alpha=\sqrt{2\mu_{OH}\omega_e\chi_e}$. The 
+parameters $\omega_e$=3737.76 cm$^{-1}$, $\omega_e \chi_e$=84.881 cm$^{-1}$, and $r_{e}$ = 0.96966 \AA\, 
+were obtained from the parameters measured for the real OH molecule, as reported in Ref. \cite{HerzbergBook}.
+Since it is possible to solve this potential exactly, this is a good test case for separating the curvature problem of CMD from the real anharmonic shift of the peaks, and also to study how the PILE method performs on a more realistic potential.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/comparison_ohanharm_factors.pdf}
-\caption{Dipole absorption cross section for the real OH molecule: (a) and (b) CMD and PILE methods at 100, 200, and 300K ; (c)  and (d) RPMD and PILE methods at 109, 450, and 436 K. The dotted grey line corresponds to the anharmonic (exact) vibrational frequency predicted for this model.}
-\label{fig:oh-rpmd-cmd-pile}
+\caption{Dipole absorption cross section for the real OH molecule  with an interatomic potential given by Eq. \ref{eq:morse}: (a) and (b) CMD and PILE methods at 100, 200, 
+and 300K ; (c)  and (d) RPMD and PILE methods at 109, 450, and 436 K. The dotted grey line corresponds to the 
+anharmonic (exact) vibrational frequency predicted for this model at 3568 cm$^{-1}$.}
+\label{fig:ohreal-rpmd-cmd-pile}
 \end{figure}
 
+
+Figure \ref{fig:ohreal-rpmd-cmd-pile} is analogous to Figure \ref{fig:oh-rpmd-cmd-pile}, but now with the anharmonic potential of Eq. \ref{eq:morse}. For the CMD and RPMD methods (panels (a) and (c) in Fig.  \ref{fig:ohreal-rpmd-cmd-pile}) we
+see the curvature and resonance problems, respectively, as were observed in the previous section in a very similar manner. It is worth pointing out that even at 300K, the position of the peak of the CMD method is still red-shifted with respect to the exact result (dotted line in Fig. \ref{fig:ohreal-rpmd-cmd-pile}), showing that also at this anharmonic potential the curvature problem is present at this temperature. 
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.35\textwidth]{figures/ohreal_positionbroad.pdf}
+\caption{Full width at half maximum FWHM (top) and peak position (bottom) with respect to temperature for the spectra shown in Fig. \ref{fig:ohreal-rpmd-cmd-pile}, plus data for spectra at 1000K for all methods. For the RPMD method we only show the data for the non resonant case at 350K and at 1000K. The dotted line in the bottom panel shows the exact position predicted for the peak at 3568 cm$^{-1}$.}
+\label{fig:ohreal-position-broad}
+\end{figure}
+
+The PILE method, shown in panels (b) and (d) of Fig. \ref{fig:ohreal-rpmd-cmd-pile} again heals both the curvature 
+and resonance problems, and yield peaks that are not only less than 30 cm$^{-1}$ away from the exact answer, but 
+also do not shift with changing temperature, as should be expected. The PILE peaks are broader in this potential than
+what could be observed for the harmonic interatomic potential case. In order to better quantify the statements above, 
+we have fitted a Lorentzian curve to the peaks shown in Fig. \ref{fig:ohreal-rpmd-cmd-pile} (for RPMD, only for the 
+non-resonant case at 350K) and plotted the peak position and the full width at half maximum (FWHM) for each 
+method and each temperature in Fig. \ref{fig:ohreal-position-broad}). The form of the peaks proved to be almost 
+perfectly Lorentzian in all cases. From the top panel of Fig. \ref{fig:ohreal-position-broad} it becomes evident that in the PILE method the broadening of the peaks increases slightly with the lowering of the temperature, but not nearly as much as for the CMD method. The peak position, shown in the bottom panel, is stable in the PILE method and not at all in the CMD method. At 1000K, all methods show essentially the same broadening and the same peak position, as expected since all of them should approach the same classical limit. Even if the width of the peak decreases with increasing temperature, it is also clear that none of these methods will approach zero width at high temperatures, which should be the correct quantum result ($\delta$-function) at any temperature.
 
 \subsection{The Zundel cation}
 
