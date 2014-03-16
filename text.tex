@@ -279,16 +279,6 @@ arduous goal.
 %We note that for this 1D potential there will be no resonance problem in RPMD in the main peak, since the ring-polymer frequencies are always shifted to higher frequencies with respect to the first physical one ($\approx$ Eq. \ref{eq:harm-freq-rpmd}), and there is only one frequencies. We see this effect in the overtones but since they have very low intensity, they do not affect the spectrum. Also, there is no curvature problem, simply because it is a 1D potential. In Figure 
 %\ref{fig:spec-quartic} the corresponding Fourier transforms of the autocorrelation functions shown in Fig. \ref{fig:autocorr-quartic} are shown, which just confirm the considerations above. CMD and critically damped PILE produce the narrowest peaks, with the exact result being a $\delta$-function centered at the position of the dotted line. 
 
-\section{Solving the resonance and curvature problems}
-
-In the previous section we have demonstrated that adding a stochastic thermostat to the internal degrees of freedom
-of a ring polymer without changing the mass matrix preserves all of the wholesome properties of RPMD, and only reduces
-the short-time limit accuracy by one order in time. In Ref.~\cite{witt+09jcp} it was shown that both RPMD and CMD 
-exhibits clearly unphysical artefacts when it comes to modeling infra-red spectroscopy and vibrational dynamics. 
-Namely, vibrational spectra obtained by RPMD are contaminated by resonances between the physical vibrational modes
-of the system and the internal modes of the ring polymer, whyle CMD spectra are affected by a curvature problem that
-causes high frequency peaks to broaden and shift to lower frequencies with decreasing temperature. 
-
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\textwidth]{figures/champagne.pdf}
@@ -301,24 +291,39 @@ potential of mean force in the radial direction. }
 \label{fig:champagne}
 \end{figure}
 
-Both of these problems are two faces of the same coin, and can be traced to the interplay of 
-high-frequency stretching modes and near-zero frequency rotations or wagging modes of the bond. 
- This can be understood by considering a ring polymer in a ``champagne bottle'' potential, as in 
-Figure~\ref{fig:champagne}a. Internal vibrations of the ring polymer along the angular direction 
-engender a net motion of the centroid in the radial direction, which is amplified
-when the two motions are in resonance. In the presence of a harmonic potential of frequency $\omega$, 
-the ring polymer frequencies are shifted to $\sqrt{\omega^2 + \tilde{\omega}^2_k}$, so in a truly 
-one-dimensional system there can never be a resonance. The fact that resonances involve an interplay 
-of different physical directions is apparent from the fact that they are observed when \emph{free ring polymer} 
-frequencies overlap with the range of frequencies corresponding to physical vibrational frequencies.
+\section{Solving the resonance and curvature problems}
 
-The adiabatic decoupling that underlies CMD can shift the internal vibrations outside of the range of 
-physical frequencies, but does not eliminate the fact that internal angular vibrations are geometrically 
-coupled with the radial centroid motion. 
-As shown in Figure~\ref{fig:champagne}b, a radial displacement of the ring polymer that would correspond to a high 
-curvature of the potential can also be produced by an internal contraction in the soft angular
-direction. This results in an effective softening of the radial potential of mean force, which is the essence
-of the curvature problem as discussed in Ref.~\cite{witt+09jcp}.
+In the previous section we have demonstrated that adding a stochastic thermostat to the internal degrees of freedom
+of a ring polymer without changing the mass matrix preserves all of the wholesome properties of RPMD, and only reduces
+the short-time limit accuracy by one order in time. 
+Here we will demonstrate that in several model and realistic problems a PILE thermostat with critical damping 
+is immune to both the resonance problem of RPMD and the curvature and time step problems of CMD
+
+
+%In Ref.~\cite{witt+09jcp} it was shown that both RPMD and CMD 
+%exhibits clearly unphysical artefacts when it comes to modeling infra-red spectroscopy and vibrational dynamics. 
+%Namely, vibrational spectra obtained by RPMD are contaminated by resonances between the physical vibrational modes
+%of the system and the internal modes of the ring polymer, whyle CMD spectra are affected by a curvature problem that
+%causes high frequency peaks to broaden and shift to lower frequencies with decreasing temperature. 
+
+%Both of these problems are two faces of the same coin, and can be traced to the interplay of 
+%high-frequency stretching modes and near-zero frequency rotations or wagging modes of the bond. 
+% This can be understood by considering a ring polymer in a ``champagne bottle'' potential, as in 
+%Figure~\ref{fig:champagne}a. Internal vibrations of the ring polymer along the angular direction 
+%engender a net motion of the centroid in the radial direction, which is amplified
+%when the two motions are in resonance. In the presence of a harmonic potential of frequency $\omega$, 
+%the ring polymer frequencies are shifted to $\sqrt{\omega^2 + \tilde{\omega}^2_k}$, so in a truly 
+%one-dimensional system there can never be a resonance. The fact that resonances involve an interplay 
+%of different physical directions is apparent from the fact that they are observed when \emph{free ring polymer} 
+%frequencies overlap with the range of frequencies corresponding to physical vibrational frequencies.
+
+%The adiabatic decoupling that underlies CMD can shift the internal vibrations outside of the range of 
+%physical frequencies, but does not eliminate the fact that internal angular vibrations are geometrically 
+%coupled with the radial centroid motion. 
+%As shown in Figure~\ref{fig:champagne}b, a radial displacement of the ring polymer that would correspond to a high 
+%curvature of the potential can also be produced by an internal contraction in the soft angular
+%direction. This results in an effective softening of the radial potential of mean force, which is the essence
+%of the curvature problem as discussed in Ref.~\cite{witt+09jcp}.
 
 
 \subsection{Model molecules: OH and CH$_4$}
@@ -445,95 +450,88 @@ We consider the real OH molecule with the interatomic potential given by a Morse
 \subsection{The Zundel cation}
 
 \begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=0.48\textwidth]{figures/oh-stretch-300K.pdf}
-\end{center}
-{\small {}$^a$ Ref. \cite{YehLee1989}; {}$^b$ Ref. \cite{AsmisScience2003}; {}$^c$ Ref. \cite{VendrellMeyer2007}}
-\caption{(a) Reference data for the IR spectrum of H$_5$O$_2^+$ taken from the literature: experimental
-IRMPD data for the OH-stretch region at 300K from Ref. \cite{YehLee1989}, experimental IRMPD data between 650 and 1900 cm$^{-1}$ 
-at 100K from Ref. \cite{AsmisScience2003}, and theoretical multi configuration time dependent Hartree (MCTDH) spectrum at 0K from Ref. \cite{VendrellMeyer2007}.
-IR spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of the dipole autocorrelation from molecular 
-dynamics trajectories in the CCSD(T) parameterised surface of Ref. \cite{HuangBraamsBowman2005}, at $T$=100K: 
-(b) Comparison between CMD and classical spectra, where the curvature problem is clear especially for the OH stretch peaks; 
-(c) Comparison between RPMD and classical spectra, where the resonances can be seen at all peaks above 1500 cm$^{-1}$; (c)
-Comparison between PILE and classical spectra, where both of the problems mentioned in (a) and (b) are not present, but the peaks
-are much broader. In (d), substantial shifts due to NQE in the evaluation of the spectra can be identified.}
-\label{fig:zundel-spectra}
+\centering\includegraphics[width=0.48\textwidth]{figures/oh-stretch-300K.pdf}
+\caption{Top panel: experimental IRMPD of H$_5$O$_2^+$ for the OH-stretch region at 300K from Ref. \cite{YehLee1989}.
+The other panels show the IR absorption spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of 
+the dipole autocorrelation, as obtained from simulations at 300K using the CCSD(T) parameterised potential 
+and dipole surfaces of Ref. \cite{HuangBraamsBowman2005}. From top to bottom:
+ molecular dynamics with classical nuclei, RPMD, PA-CMD, and PILE with critical damping on internal ring-polymer modes,
+as indicated by the legend.}
+\label{fig:zundel-highf}
 \end{figure}
 
+
 \begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=0.48\textwidth]{figures/zundel_lowfreq_100K.pdf}
-\end{center}
-{\small {}$^a$ Ref. \cite{YehLee1989}; {}$^b$ Ref. \cite{AsmisScience2003}; {}$^c$ Ref. \cite{VendrellMeyer2007}}
-\caption{(a) Reference data for the IR spectrum of H$_5$O$_2^+$ taken from the literature: experimental
-IRMPD data for the OH-stretch region at 300K from Ref. \cite{YehLee1989}, experimental IRMPD data between 650 and 1900 cm$^{-1}$ 
-at 100K from Ref. \cite{AsmisScience2003}, and theoretical multi configuration time dependent Hartree (MCTDH) spectrum at 0K from Ref. \cite{VendrellMeyer2007}.
-IR spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of the dipole autocorrelation from molecular 
-dynamics trajectories in the CCSD(T) parameterised surface of Ref. \cite{HuangBraamsBowman2005}, at $T$=100K: 
-(b) Comparison between CMD and classical spectra, where the curvature problem is clear especially for the OH stretch peaks; 
-(c) Comparison between RPMD and classical spectra, where the resonances can be seen at all peaks above 1500 cm$^{-1}$; (c)
-Comparison between PILE and classical spectra, where both of the problems mentioned in (a) and (b) are not present, but the peaks
-are much broader. In (d), substantial shifts due to NQE in the evaluation of the spectra can be identified.}
-\label{fig:zundel-spectra}
+\centering\includegraphics[width=0.48\textwidth]{figures/zundel_lowfreq_100K.pdf}
+\caption{Top panel: experimental IRMPD of H$_5$O$_2^+$ for the 800-2000$cm^{-1}$ at 100K from Ref. \cite{AsmisScience2003}.
+The other panels show the IR absorption spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of 
+the dipole autocorrelation, as obtained from simulations at 100K using the CCSD(T) parameterised potential 
+and dipole surfaces of Ref. \cite{HuangBraamsBowman2005}. From top to bottom:
+ molecular dynamics with classical nuclei, RPMD, PA-CMD, and PILE with critical damping on internal ring-polymer modes,
+as indicated by the legend.}
+\label{fig:zundel-lowf}
 \end{figure}
 
 As a final example of the application of a stochastic term to remove unphysical resonances 
 from RPMD spectra, let us consider a more complex case. The Zundel cation H$_5$O$_2^+$ 
-is an ideal benchmark system, having been 
+is an ideal benchmark system for quantum dynamics methods, having been 
 extensively studied in the literature~\cite{Schatteburg2008}, from both a theoretical
 \cite{AgostiniCiccotti2011, ParkKim2007, VenerSauer2001, SauerDoebler2005, ChengKrause1997, VendrellMeyer2007, 
 BaerMarxMathias2010, KaledinBowmanJordan2009, HuangBraamsBowman2005} 
 and experimental~\cite{YehLee1989, GuascoJohnson2011, AsmisScience2003, HammerBowmanCarter2005, FridgenMaitre2004}
-points of view. The Zundel cation is also convenient as a benchmark of new methodologies
-because of the availability of a potential energy and dipole surfaces parametrized
-with CCSD(T) data that was published by Huang, Braams and Bowman~\cite{HuangBraamsBowman2005},
-which is both very accurate and inexpensive to evaluate. 
+points of view. The Zundel cation is also convenient because of the availability of a 
+potential energy and dipole surfaces parametrized with CCSD(T) data that was 
+published by Huang, Braams and Bowman~\cite{HuangBraamsBowman2005},
+which is at the same time very accurate and inexpensive to evaluate. 
 
 Furthermore, H$_5$O$_2^+$ exhibits profoundly quantum mechanical behaviour
 that one cannot expect to reproduce with the techniques that we present here
 since they all lack any form of quantum phase information. 
-The shared proton region contains a doublet feature 
-at low temperatures that has attracted a lot of attention~\cite{GuascoJohnson2011, HammerBowmanCarter2005}.
-As a matter of fact, this structure can only be captured by certain levels of 
-theory that include anharmonic effects and a fully quantum mechanical treatment
+At low temperatures the shared proton region contains a doublet feature 
+that has attracted a lot of attention~\cite{GuascoJohnson2011, HammerBowmanCarter2005}.
+This spectral feature has been interpreted as a Fermi resonance
+involving a fourth-order coupling between the proton transfer mode,
+the O-O stretching mode, and the H-O-H wagging mode \cite{VendrellMeyer2007, Schatteburg2008},
+and therefore it can only be captured by high levels of theory that include 
+anharmonic effects and a fully quantum mechanical treatment
 of nuclear dynamics, such as the multi-configurational time-dependent Hartree (MCTDH) method at
-0K \cite{VendrellMeyer2007} and is therefore an excellent memento of the limitations of 
-approximate, semi-classical methods.
+0K \cite{VendrellMeyer2007}.
 
 With this caveat in mind, let us first consider the frequency range corresponding 
-to the OH stretch (Figure~???). Experiments show two distinct peaks at about 
-3600 and 3700 cm$^{-1}$~\cite{YehLee1989}. As for the anharmonic OH discussed 
+to the OH stretch (Figure~\ref{fig:zundel-highf}). Experiments show two distinct peaks at about 
+3600 and 3700 cm$^{-1}$~\cite{YehLee1989}. Similarly to the case of the anharmonic OH discussed 
 in the previous paragraph, the classical spectrum is blue shifted by almost 
 150~cm$^{-1}$. The RPMD spectrum is closer to experiment, but shows multiple peaks and a broad
-low-frequency feature. In a multi-dimensional problem such as this, resonances may be due to 
+low-frequency band. In a multi-dimensional problem such as this, resonances may be due to 
 internal modes corresponding to non-zero frequency molecular vibrations, which makes it hard
 to predict whether or not the spectrum is contaminated by spurious oscillations. 
 CMD is red shifted with respect to experiment, and does not show recognizable separate peaks.
 Given the high accuracy of the potential energy surface, we can attribute the red shift to the
 curvature problem -- and in fact the shift is exacerbated if the temperature is further reduced. 
 As pointed out in previous work~\ref{Ivanonv????}, in a more complex case in which one could not
-profit of a potential energy surface of such exquisite quality, or in the absence of very clean 
+use a potential energy surface of such exquisite quality, or in the absence of very clean 
 experiments, it would be impossible to determine whether the shift relative to the classical
 simulation is due to genuine quantum anharmonic effects or to the artefacts inherent in the methodology.
-Finally, let us consider the PILE spectrum. The position of the stretching peak  is in better agreement
-with experiment, even though the excessive broadening that was also observed for the harmonic and anharmonic
-OH washes out the doublet structure and yields a single, very broad peak.
+Finally, the critical-damping PILE spectrum shows neither resonances, neither curvature-related red shift. 
+The position of the stretching peak  is in better agreement with experiment, even though the excessive 
+broadening that was also observed for the harmonic and anharmonic
+OH washes out the doublet structure and yields a single peak centered at about 3650 cm$^{-1}$.
 
 We then performed simulations at 100K to compare RPMD, CMD and PILE with experiments
-measuring the intermediate frequency region of the spectrum~\cite{AsmisScience2003} (Figure~????). 
+measuring the intermediate frequency region of the spectrum~\cite{AsmisScience2003} (Figure~\ref{fig:zundel-lowf}). 
 All semi-classical approaches generate very broad peaks, and RPMD 
 displays multiple peaks in the bending region that can probably be attributed to resonances.
 Interestingly, the bending peak for CMD is red-shifted relative to experiment, suggesting 
 that at such low temperatures artefacts due to adiabatic decoupling can also manifest themselves 
-for lower frequency modes than the stretches. 
-None of the approximate methods investigated here can reproduce the
+for lower frequency modes than the stretches. The bending peak from the critical-damping
+PILE simulations is closest to the experiment and shows no signs of resonances.
+As expected, none of the approximate methods investigated here can reproduce the
 doublet peak at around 1000 cm$^{-1}$, which is shown in Fig. \ref{fig:zundel-spectra}(a).
-Given that this doublet structure has been interpreted as a Fermi resonance
-involving a fourth-order coupling between the proton transfer mode,
-the O-O stretching mode, and the H-O-H wagging mode \cite{VendrellMeyer2007, Schatteburg2008},
-it does not come as a surprise that it is not present in the methods investigated here:
-none of these methods contain the necessary physics to describe such a resonance.
+This is a reminder that no semi-classical quantum dynamics method can be expected to be capable
+of capturing subtle, coherent quantum effects, and so CMD, RPMD and the its PILE variant should
+only be used to qualitatively assess whether discrepancies between experimental data and 
+classical simulations of dipole absorption spectra can be traced to the lack of an
+appropriate treatment of the quantum nature of nuclear degrees of freedom.
 
 % this belongs to conclusions, so we leave it to David
 %One has to keep in mind that semi-classical quantum dynamics methods cannot fully account 
