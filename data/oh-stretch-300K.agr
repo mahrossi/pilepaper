@@ -83,7 +83,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Mon Mar 17 11:32:32 2014"
+@timestamp def "Tue Mar 18 11:12:31 2014"
 @with line
 @    line on
 @    line loctype view
@@ -879,7 +879,7 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 2.5
-@    yaxis  label "n(\xw\0)\xa(w)\0"
+@    yaxis  label "\xs(w)\0"
 @    yaxis  label layout para
 @    yaxis  label place auto
 @    yaxis  label char size 1.600000
