@@ -328,8 +328,8 @@ is immune to both the resonance problem of RPMD and the curvature and time step 
 
 \subsection{Model molecules: OH and CH$_4$}
 
-We start by studying two model molecules that have been studied in Ref. \cite{witt+09jcp},
-namely the OH and the CH$_4$ molecules with an interatomic potential given by
+We start by considering two model molecules that have been studied in Ref. \cite{witt+09jcp},
+namely the OH and the CH$_4$ molecules with a harmonic interatomic potential given by
 
 \begin{equation}
 \phi=\sum_{bonds} \frac{k_b}{2} (r-r_{eq})^2 + \sum_{angles} \frac{k_a}{2}(\theta - \theta_{eq})^2,
@@ -357,15 +357,15 @@ namely the OH and the CH$_4$ molecules with an interatomic potential given by
 \label{fig:ch4-rpmd-cmd-pile}
 \end{figure}
 
-For these models, we calculate the dipole absorption cross section $n(\omega)\alpha(\omega)\propto \omega^2  \tilde{I}(\omega)$, 
+For each molecule we calculate the dipole absorption cross section $n(\omega)\alpha(\omega)\propto \omega^2  \tilde{I}(\omega)$, 
 where $\tilde{I}(\omega)$ is the Fourier transform of the Kubo-transformed autocorrelation function of the molecular dipole 
-moment~\cite{habe+08jcp}. It is this autocorrelation function that is approximated by CMD, RPMD, and the PILE method,
-as shown in Figure~\ref{fig:oh-rpmd-cmd-pile} for the model OH and in Figure~\ref{fig:ch4-rpmd-cmd-pile}
-for CH$_4$. For  both molecules we computed the spectra at the same temperatures and 
-with the same number of beads used in Ref. \cite{witt+09jcp},
-and removed translations and rotations using the same scheme. 
+moment~\cite{habe+08jcp}. CMD, RPMD, and PILE all yield an approximation to this autocorrelation function. 
+The resulting spectra are shown in Figure~\ref{fig:oh-rpmd-cmd-pile} for the model OH 
+and in Figure~\ref{fig:ch4-rpmd-cmd-pile} for CH$_4$. 
+For the sake of comparison, simulations were performed removing translations and 
+rotations, at the same temperatures and with the same number of beads as in Ref. \cite{witt+09jcp}.
 
-In both we show in panels (a) and (c) the CMD and RPMD 
+In both figures we show in panels (a) and (c) the CMD and RPMD 
 spectra, which are fully consistent with the results reported 
 in Refs. \cite{witt+09jcp, ivanov+10jpc}.
 The curvature problem of CMD is apparent for both molecules.
@@ -374,7 +374,7 @@ to lower frequencies, and broaden substantially with
 decreasing temperatures.
 The shift is more accentuated for the OH molecule than for the
 CH$_4$ molecule, since the presence of an angular term in the potential 
-for the CH$_4$ molecule reduces the spread of the ring polymer in the
+for methane reduces the spread of the ring polymer in the
 direction orthogonal to the stretch, thereby limiting the 
 softening of the effective centroid potential.
 For RPMD, one clearly sees that peaks in the spectrum are
@@ -390,16 +390,16 @@ In panels (b) and (d) we show the critical-damping PILE results for both
 molecules at the same temperatures used for CMD and RPMD. 
 In all cases the resonant peaks disappear and the curvature problem is not present. 
 This shows that the curvature problem does indeed depend on the choice
-of the mass matrix used in CMD (in order to adiabatically separate the 
-internal modes of the ring polymer from the centroid), 
+of the mass matrix used in CMD, 
 rather than on the thermostatting of the internal modes.
 As we will discuss more in detail in the next subsection, the PILE
-spectrum gets slightly broader as the temperature is lowered.
+spectrum gets broader as the temperature is lowered.
 This is a consequence of the fact that internal modes oscillations
 are damped by the Langevin term but not eliminated. They do not
-show up as sharp resonances, but contribute as a broad background 
-that becomes more pronounced as the temperature lowers and the
-spacing between internal frequencies decreases.
+show up as sharp resonances, but contribute as an indirect 
+damping of physical oscillations that becomes more pronounced as 
+the temperature lowers and the spacing between internal frequencies 
+decreases.
 
 \begin{figure}[htbp]
 \centering
@@ -411,14 +411,14 @@ PILE methods with different $\gamma^{(k)}$ parameters.}
 \end{figure}
 
 Since there is no stringent requirement to use a critical damping for the 
-$\gamma^{(k)}$ parameters, we have investigated the sensitivity of 
-results to choice of damping. Figure \ref{fig:oh-rpmd-pile-dampings} 
+$\gamma^{(k)}$ parameters in Eq.(???), we have investigated the sensitivity of 
+results to the choice of damping. Figure \ref{fig:oh-rpmd-pile-dampings} 
 shows the PILE IR spectrum of the OH molecule at 109K calculated with different
 $\gamma^{(k)}$ parameters, both in the underdamped and overdamped regimes. 
 The changes observed are not substantial: Going as high as ten times the critical 
 damping (Fig. \ref{fig:oh-rpmd-pile-dampings}(e)), or as low
-as one tenth of it (Fig. \ref{fig:oh-rpmd-pile-dampings}(b)), does not change 
-the peak position by more than 3\% of its wavenumber. 
+as one tenth of it (Fig. \ref{fig:oh-rpmd-pile-dampings}(a)), does not change 
+the peak position by more than 3\%. 
 
 
 \subsection{Realistic OH molecule}
@@ -469,31 +469,29 @@ in the bottom panel shows the exact position predicted for the peak at 3568 cm$^
 \label{fig:ohreal-position-broad}
 \end{figure}
 
-The PILE method, shown in panels (b) and (d) of Fig. \ref{fig:ohreal-rpmd-cmd-pile} again heals both the curvature 
+The PILE method, shown in panels (b) and (d) of Fig. \ref{fig:ohreal-rpmd-cmd-pile}, heals both the curvature 
 and resonance problems, and yield peaks that are not only less than 30 cm$^{-1}$ away from the exact answer, but 
 also do not shift with changing temperature. The PILE peaks are broader in this potential than
 in the case of the harmonic OH. In order to better quantify the temperature dependence of the position 
 and broadening of the peak, we have fitted a Lorentzian curve to the peaks shown in Fig. 
 \ref{fig:ohreal-rpmd-cmd-pile}. 
-In Fig. \ref{fig:ohreal-position-broad}) we plot the peak position and the full 
-width at half maximum (FWHM) as a function of temperature (for RPMD, only for the 
-T=350K was considered). We add also data for classical simulations.
-The form of the peaks proved to be almost perfectly Lorentzian in all cases,
-except for the points at 1000K, in which the peaks were slightly skewed to the right.
+In Fig. \ref{fig:ohreal-position-broad} we plot the peak position and the full 
+width at half maximum (FWHM) as a function of temperature,
+also including data from classical simulations.
+The shape of the peaks proved to be almost perfectly Lorentzian in all cases,
+except for the simulations at 1000K, in which the peaks were noticeably asymmetric.
 From the top panel of Fig. \ref{fig:ohreal-position-broad} it becomes evident that 
 in the PILE method the broadening of the peaks increases slightly with the lowering 
 of the temperature, but not nearly as much as for the CMD method. 
 The peak position, shown in the bottom panel, is stable in the PILE method, contrary to
 what is observed for CMD. The classical simulations produce a peak
-with only FWHM=11 $cm^{-1}$ at 100K , but the width increases with temperature.
+with only FWHM=11cm$^{-1}$ at 100K, but the width increases with temperature.
 The peak position of the classical simulation is more than 100 cm$^{-1}$
-blue-shifted with respect to the exact result, though.
-At 1000K, all methods approach the same classical limit,
-and show essentially the same peak broadening. The position of the
-classical peak at 1000 K is still blue-shifted with respect to the semi-classical
-simulations. Given that a vibration at 3500 cm$^{-1}$ corresponds to a temperature
-of around 2500 K, we expect that the exact classical limit to be reached at only
-much higher temperatures, where the molecule would already dissociate.
+blue-shifted with respect to the exact result.
+All the methods converge to the classical limit as the temperature 
+increases. Since the a quantum of vibration at 3500 cm$^{-1}$
+corresponds roughly to a temperature of 2500K, even at 1000K one
+can observe significant differences.
 
 %Even if the width of the peak decreases with increasing temperature, it is also clear that 
 %none of these methods will approach zero width at high temperatures, which should be the 
@@ -509,7 +507,8 @@ much higher temperatures, where the molecule would already dissociate.
 \subfigure[100K]{
 \includegraphics[width=0.435\textwidth]{figures/zundel_lowfreq_100K.pdf}
 }
-\caption{(a) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the OH-stretch region at 300K from Ref. \cite{YehLee1989}. The other panels show the IR absorption spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of the dipole autocorrelation, as obtained from simulations at 300K using the CCSD(T) parameterised potential and dipole surfaces of Ref. \cite{HuangBraamsBowman2005}. From top to bottom:
+\caption{
+(a) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the OH-stretch region at 300K from Ref. \cite{YehLee1989}. The other panels show the IR absorption spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of the dipole autocorrelation, as obtained from simulations at 300K using the CCSD(T) parameterised potential and dipole surfaces of Ref. \cite{HuangBraamsBowman2005}. From top to bottom:
  molecular dynamics with classical nuclei, RPMD, PA-CMD, and PILE with critical damping on internal ring-polymer modes, as indicated by the legend. (b) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the 800-2000$cm^{-1}$ at 100K from Ref. \cite{AsmisScience2003}. The other panels are the same as in (a), but at 100 K.}
 \label{fig:zundel-highf-lowf}
 \end{figure*}
@@ -534,13 +533,13 @@ extensively studied in the literature~\cite{Schatteburg2008}, from both a theore
 BaerMarxMathias2010, KaledinBowmanJordan2009, HuangBraamsBowman2005} 
 and experimental~\cite{YehLee1989, GuascoJohnson2011, AsmisScience2003, HammerBowmanCarter2005, FridgenMaitre2004}
 points of view. The Zundel cation is also convenient because of the availability of a 
-potential energy and dipole surfaces parametrized with CCSD(T) data that was 
+potential energy and dipole surfaces parametrized against CCSD(T) data that was 
 published by Huang, Braams and Bowman~\cite{HuangBraamsBowman2005},
 which is at the same time very accurate and inexpensive to evaluate. 
 
 Furthermore, H$_5$O$_2^+$ exhibits profoundly quantum mechanical behaviour
 that one cannot expect to reproduce with the techniques that we present here
-since they all lack any form of quantum phase information. 
+since they all lack quantum phase information. 
 At low temperatures the shared proton region contains a doublet feature 
 that has attracted a lot of attention~\cite{GuascoJohnson2011, HammerBowmanCarter2005}.
 This spectral feature has been interpreted as a Fermi resonance
@@ -552,11 +551,14 @@ of nuclear dynamics, such as the multi-configurational time-dependent Hartree (M
 0K \cite{VendrellMeyer2007}.
 
 With this caveat in mind, let us first consider the frequency range corresponding 
-to the OH stretch (Figure~\ref{fig:zundel-highf-lowf}(a)). Experiments~\cite{YehLee1989} show two distinct peaks at about 
+to the OH stretch (Figure~\ref{fig:zundel-highf-lowf}(a)). We performed 200 6ps trajectories
+at 300K, using 16 beads and without removing rotations. 
+Experiments performed at 300K~\cite{YehLee1989} show two distinct peaks at about 
 3600 and 3700 cm$^{-1}$. Similarly to the case of the anharmonic OH discussed 
 in the previous subsection, the classical spectrum is blue shifted by almost 
-150~cm$^{-1}$. The RPMD spectrum is closer to experiment, but shows multiple peaks and a broad
-low-frequency band. In a multi-dimensional problem such as this, resonances may be due to 
+150~cm$^{-1}$. The RPMD spectrum is closer to experiment, but shows multiple peaks and a broad tail
+towards lower frequencies. 
+In a multi-dimensional problem such as this, resonances may be due to 
 internal modes corresponding to non-zero frequency molecular vibrations, which makes it hard
 to assess whether and how the spectrum is contaminated by spurious oscillations. 
 CMD is red shifted with respect to experiment, and does not show recognizable separate peaks.
@@ -566,13 +568,14 @@ As pointed out in previous work~\cite{ivanov+10jpc}, in a more complex case in w
 use a potential energy surface of such exquisite quality, and in the absence of very clean 
 reference experiments, it would be impossible to determine whether the shift relative to the classical
 simulation is due to genuine quantum anharmonic effects or to the artefacts inherent in the methodology.
-Finally, the critical-damping PILE spectrum shows neither resonances, or curvature-related red shift. 
+Finally, the critical-damping PILE spectrum shows neither resonances, nor curvature-related red shift. 
 The position of the stretching peak  is in better agreement with experiment, even though the excessive 
 broadening that was also observed for the harmonic and anharmonic
 OH washes out the doublet structure and yields a single peak centered at about 3650 cm$^{-1}$.
 
-We then performed simulations at 100K to compare RPMD, CMD and PILE with experiments
-measuring the intermediate frequency region of the spectrum~\cite{AsmisScience2003} (Figure~\ref{fig:zundel-highf-lowf}(b)). 
+We then performed simulations 200 6ps trajectories at 100K using 64 beads 
+to compare RPMD, CMD and PILE with experiments measuring the intermediate frequency 
+region of the spectrum~\cite{AsmisScience2003} (Figure~\ref{fig:zundel-highf-lowf}(b)). 
 All semi-classical approaches generate very broad peaks, and RPMD 
 displays multiple peaks in the bending region that can probably be attributed to resonances.
 Interestingly, the bending peak for CMD is red-shifted relative to experiment, suggesting 
@@ -584,10 +587,9 @@ As discussed above, none of the approximate methods investigated here can reprod
 doublet peak at around 1000 cm$^{-1}$, which is shown in the experimental
 spectrum of Fig. \ref{fig:zundel-highf-lowf}(b).
 This is a reminder that no semi-classical quantum dynamics method can be expected to be capable
-of capturing subtle, coherent quantum effects. Methods like CMD, RPMD and the its PILE variant should
-only be used to qualitatively assess whether discrepancies between experimental data and 
-classical simulations of dipole absorption spectra can be traced to the lack of an
-appropriate treatment of the quantum nature of nuclear degrees of freedom.
+of capturing subtle, coherent quantum effects. Methods like CMD, RPMD and its PILE variant 
+can only be expected to capture zero-point energy related anharmonic shifts of the
+peak position.
 
 % this belongs to conclusions, so we leave it to David
 %One has to keep in mind that semi-classical quantum dynamics methods cannot fully account 
