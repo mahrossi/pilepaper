@@ -506,15 +506,26 @@ can observe significant differences.
 
 \begin{figure*}[htbp]
 \centering
-\subfigure[300K]{
-\includegraphics[width=0.25\textwidth]{figures/oh-stretch-300K.pdf}
-}
 \subfigure[100K]{
 \includegraphics[width=0.435\textwidth]{figures/zundel_lowfreq_100K.pdf}
 }
+\subfigure[300K]{
+\includegraphics[width=0.25\textwidth]{figures/oh-stretch-300K.pdf}
+}
 \caption{
-(a) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the OH-stretch region at 300K from Ref. \cite{YehLee1989}. The other panels show the IR absorption spectrum of H$_5$O$_2^+$ obtained from the Fourier transform of the dipole autocorrelation, as obtained from simulations at 300K using the CCSD(T) parameterised potential and dipole surfaces of Ref. \cite{HuangBraamsBowman2005}. From top to bottom:
- molecular dynamics with classical nuclei, RPMD, PA-CMD, and PILE with critical damping on internal ring-polymer modes, as indicated by the legend. (b) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the 800-2000$cm^{-1}$ at 100K from Ref. \cite{AsmisScience2003}. The other panels are the same as in (a), but at 100 K.}
+(a) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the 800-2000$cm^{-1}$  
+region at 100K from Ref. \cite{AsmisScience2003}. The other panels show the 
+IR absorption spectrum of H$_5$O$_2^+$ obtained from the Fourier 
+transform of the dipole autocorrelation, as obtained from simulations at 
+300K using the CCSD(T) parameterised potential and dipole surfaces of 
+Ref. \cite{HuangBraamsBowman2005}. From top to bottom:
+ molecular dynamics with classical nuclei, RPMD, PA-CMD, and PILE 
+with critical damping on internal ring-polymer modes, as indicated 
+by the legend. 
+(b) Top panel: experimental IRMPD of H$_5$O$_2^+$ for the 
+OH stretch region at 300K from Ref. \cite{YehLee1989}. 
+The other panels are the same as in (a), but at 300 K.
+}
 \label{fig:zundel-highf-lowf}
 \end{figure*}
 
@@ -556,7 +567,7 @@ of nuclear dynamics, such as the multi-configurational time-dependent Hartree (M
 0K \cite{VendrellMeyer2007}.
 
 With this caveat in mind, let us first consider the frequency range corresponding 
-to the OH stretch (Figure~\ref{fig:zundel-highf-lowf}(a)). We performed 200 6ps trajectories
+to the OH stretch (Figure~\ref{fig:zundel-highf-lowf}(b)). We performed 200 6ps trajectories
 at 300K, using 16 beads and without removing rotations. 
 Experiments performed at 300K~\cite{YehLee1989} show two distinct peaks at about 
 3600 and 3700 cm$^{-1}$. Similarly to the case of the anharmonic OH discussed 
@@ -580,7 +591,7 @@ OH washes out the doublet structure and yields a single peak centered at about 3
 
 We then performed simulations 200 6ps trajectories at 100K using 64 beads 
 to compare RPMD, CMD and PILE with experiments measuring the intermediate frequency 
-region of the spectrum~\cite{AsmisScience2003} (Figure~\ref{fig:zundel-highf-lowf}(b)). 
+region of the spectrum~\cite{AsmisScience2003} (Figure~\ref{fig:zundel-highf-lowf}(a)). 
 All semi-classical approaches generate very broad peaks, and RPMD 
 displays multiple peaks in the bending region that can probably be attributed to resonances.
 Interestingly, the bending peak for CMD is red-shifted relative to experiment, suggesting 
@@ -590,7 +601,7 @@ around 1700 cm$^{-1}$ from the critical-damping
 PILE simulations is closest to the experiment and shows no signs of resonances.
 As discussed above, none of the approximate methods investigated here can reproduce the
 doublet peak at around 1000 cm$^{-1}$, which is shown in the experimental
-spectrum of Fig. \ref{fig:zundel-highf-lowf}(b).
+spectrum of Fig. \ref{fig:zundel-highf-lowf}(a).
 This is a reminder that no semi-classical quantum dynamics method can be expected to be capable
 of capturing subtle, coherent quantum effects. Methods like CMD, RPMD and its PILE variant 
 can only be expected to capture zero-point energy related anharmonic shifts of the
